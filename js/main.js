@@ -1,12 +1,11 @@
 
 
 const About = document.querySelectorAll('.Əsas');
-const AboutSection = document.getElementById('About-section');
+const AboutSection = document.getElementById('Əsas');
 
 
 const wakeMeUp = document.querySelectorAll('.Problem');
 const wakeMeUpSection = document.getElementById("Problem");
-
 
 const App = document.querySelectorAll('.Həll');
 const AppSection= document.getElementById("Həll");
@@ -29,7 +28,8 @@ for (let i = 0; i < About.length; i++) {
 
 
 for (let i = 0; i < wakeMeUp.length; i++) {
-  wakeMeUp[0].addEventListener("click", function(){
+  wakeMeUp[i].addEventListener("click", function(){
+    console.log(wakeMeUp)
     wakeMeUpSection.scrollIntoView();
   })
 }
@@ -72,14 +72,59 @@ const closeBurger = document.getElementById('burger-close');
 let display = false
 
 $(document).ready(function(){
-  $("#burger-open").click(function(){
+  $(".burger-open").click(function(){
     if(display){
       display = false
+      console.log(display)
       $(".burger-menu").fadeOut();
     }else{
       display = true
-      
+      console.log(display)
       $(".burger-menu").fadeIn();
     }
   });
+});
+
+// send email
+
+const Name = document.getElementById('name');
+const surname = document.getElementById('surname');
+const email = document.getElementById('Email');
+const phone = document.getElementById('Phone');
+
+const submit = document.getElementById('btn');
+
+submit.addEventListener('click', function(){
+  const data ={
+    name:Name.value,
+    surname:surname.value,
+    email:email.value,
+    phone:phone.value
+  }
+  Name.value = ''
+  surname.value = ''
+  email.value = ''
+  phone.value = ''
+  console.log(data) 
+
+  const xhttp = new XMLHttpRequest();
+  
+  xhttp.open("POST", "https://aquaphonics-main-wvoglgccwejru.herokuapp.com/send");
+  xhttp.setRequestHeader("Content-type", 'application/json');
+  xhttp.send(JSON.stringify(data));
+})
+
+// nav bars
+
+
+const topNav = document.querySelector('.top-nav')
+window.addEventListener("scroll", (event) => {
+  let scroll = this.scrollY;
+  if(scroll > 100){
+    $(".top-nav").fadeIn();
+    topNav.style.height = "50px"
+  }else{
+    topNav.style.height = "0px"
+    $(".top-nav").fadeOut();
+  }
 });

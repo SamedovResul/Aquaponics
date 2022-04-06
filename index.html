@@ -9,6 +9,25 @@
   <title>Enthouse</title>
 </head>
 <body>
+  <div class="top-nav">
+    <div class="nav-logo">
+      <span>
+        Logo
+      </span>
+    </div>
+    <div class="nav-bar ">
+      <ul>
+        <li class="Əsas" > Əsas </li>
+        <li class="Problem" > Problem </li>
+        <li class="Həll"> Həll </li>
+        <li class="Qiymət">Qiymət</li>
+        <li class="Əlaqə"> Əlaqə </li>
+      </ul>
+    </div>
+    <button class="burger-button burger-open">
+      &#9776;
+    </button>
+  </div>
   <section id="Əsas" class="head-warpper ">
     <div class="container">
       <div class="container-fluid">
@@ -29,6 +48,21 @@
                   <li class="Əlaqə"> Əlaqə </li>
                 </ul>
               </div>
+              <div class="nav-bar burger-menu">
+                <button class="burger-button burger-open">
+                  &#9776;
+                </button>
+                <ul>
+                  <li class="Əsas" > Əsas </li>
+                  <li class="Problem" > Problem </li>
+                  <li class="Həll"> Həll </li>
+                  <li class="Qiymət">Qiymət</li>
+                  <li class="Əlaqə"> Əlaqə </li>
+                </ul>
+              </div>
+              <button class="burger-button burger-open">
+                &#9776;
+              </button>
             </div>
           </div>
           <div class="col-md-12">
@@ -279,19 +313,19 @@
             <div class="form-div">
             <form action="">
               <label for="name"> Ad:
-                <input type="text" id="name">
+                <input  type="text" id="name" required>
               </label>
               <label for="surname"> Soyad:
-                <input type="text" id="surname" >
+                <input type="text" id="surname" required >
               </label>
               <label for="Email"> Email:
-                <input type="email" id="Email" >
+                <input type="email" id="Email" required >
               </label>
               <label for="Phone" > Telefon:
-                <input type="number" id="Phone">
+                <input type="number" id="Phone" required>
               </label>
             </form>
-            <button>submit</button>
+            <button id="btn">submit</button>
             </div>
             
           </div>
