@@ -9,7 +9,7 @@
   background-attachment: fixed;
   object-fit: cover;
   position: relative;
-  height: 100vh;
+  height: 90vh;
 }
 
 
@@ -187,7 +187,7 @@
   object-fit: cover;
   position: relative;
   padding: 40px 0px;
-  height: 100vh;
+  height: 90vh;
 }
 
 .section-2::before{
