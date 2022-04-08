@@ -122,6 +122,11 @@ submit.addEventListener('click', function(){
     xhttp.setRequestHeader("Content-type", 'application/json');
     xhttp.send(JSON.stringify(data));
     alert('Sizinlə əlaqə saxlanılacaq')
+    Name.value = ''
+    surname.value = ''
+    email.value = ''
+    phone.value = ''
+    message.value= ''
   }else{
     alert('xaiş edirik xanaların hamısını doldurun')
   }
@@ -129,11 +134,7 @@ submit.addEventListener('click', function(){
     alert("Emaili doğru yazın")
   }
   
-  Name.value = ''
-  surname.value = ''
-  email.value = ''
-  phone.value = ''
-  message.value= ''
+  
 })
 
 // nav bars
