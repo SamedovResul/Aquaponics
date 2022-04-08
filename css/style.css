@@ -165,7 +165,7 @@
     background-color: unset;
     border: none;
     height: 40px;
-    color: white;
+    color: white !important;
   }
   .nav-box .burger-button{
     color: black;
