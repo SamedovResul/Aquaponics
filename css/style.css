@@ -467,13 +467,6 @@
   padding-left: 10px;
 }
 
-/* .section-8 form label:nth-last-child(1)  {
-  margin: 20px 0px;
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  padding-left: 10px;
-} */
 
 .section-8 form label input{
   margin-right: 10px;
@@ -496,7 +489,6 @@
 }
 
 .form-div  button{
-  background-color: unset;
   padding: 5px 14px;
   border: 1px solid black;
   border-radius: 10px;
