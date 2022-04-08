@@ -38,7 +38,6 @@
 }
 
 .nav-bar {
-  width: 30%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -68,7 +67,7 @@
   margin: auto;
   position: sticky;
   z-index: 999;
-  padding: 0px 100px;
+  padding: 0px 30px;
   height: 0px;
   overflow: hidden;
   top: -0.5%;
@@ -150,6 +149,7 @@
     top: 0px;
     background-color: black;
     z-index: 999;
+    width: 50%;
   }
   .burger-menu ul{
     display: block;
@@ -215,11 +215,12 @@
   width: 25%;
   position: relative;
   font-size: 30px;
+  color: white;
 }
 
 @media(max-width:768px){
   .solution h2{
-    width: 35%;
+    width: auto;
     position: relative;
     font-size: 20px;
   }
@@ -227,7 +228,6 @@
 
 @media(max-width:545px){
   .solution h2{
-    width: 45%;
     position: relative;
     font-size: 20px;
     margin: auto;
@@ -272,11 +272,14 @@
   padding: 100px 30px;
 }
 
-@media(max-width:567px){
+@media(max-width:768px){
   .our-solution{
     justify-content: center;
+    padding: 60px  30px 20px 30px;
   }
 }
+
+
 
 .our-solution h3{
   position: relative;
@@ -287,6 +290,9 @@
 @media(max-width:500px){
   .our-solution h3{
     font-size: 25px;
+  }
+  .our-solution{
+    padding: 30px 0px;
   }
 }
 
@@ -343,8 +349,19 @@
   justify-content: center;
   align-items: center;
   height: 100%;
-  padding: 40px 100px;
+  padding: 20px 40px;
   text-align: center;
+}
+@media(max-width:768px){
+  .section-4 .right-box{
+    padding: 40px 40px;
+  }
+}
+
+
+
+.section-4 .right-box p{
+  font-size: 20px;
 }
 
 .section-4 .right-box img{
@@ -381,6 +398,12 @@
   align-items: center;
   padding: 30px;
 }
+@media(max-width:768px){
+  .section-5-div{
+    text-align: center;
+  }
+}
+
 
 .section-5-div img{
   width: 100%;
@@ -429,15 +452,36 @@
   margin: 20px 0px;
   display: flex;
   justify-content: space-between;
-  width: 90%;
+  width: 100%;
+  padding-left: 10px;
 }
 
+/* .section-8 form label:nth-last-child(1)  {
+  margin: 20px 0px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding-left: 10px;
+} */
+
 .section-8 form label input{
-  
-  width: 90%;
+  margin-right: 10px;
+  width: 80%;
+  height: 40px;
   outline:0 !important;
-  border: none;
-  border-bottom: 2px solid rgb(119, 113, 113);
+  border: 1px solid solid rgb(119, 113, 113);
+  border-radius: 10px;
+  padding-left: 5px;
+  /* border-bottom: 2px solid rgb(119, 113, 113); */
+}
+
+.section-8 form label textarea{
+  height: 150px;
+  width: 80%;
+  border: 2px solid black;
+  border-radius: 10px;
+  margin-right: 10px;
+  padding: 10px;
 }
 
 .form-div  button{

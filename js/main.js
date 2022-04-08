@@ -83,7 +83,16 @@ $(document).ready(function(){
       $(".burger-menu").fadeIn();
     }
   });
+
+  $(".burger-close-byDiv").click(function(){
+    if(display){
+      display = false
+      console.log(display)
+      $(".burger-menu").fadeOut();
+    }
+  });
 });
+
 
 // send email
 
@@ -91,20 +100,23 @@ const Name = document.getElementById('name');
 const surname = document.getElementById('surname');
 const email = document.getElementById('Email');
 const phone = document.getElementById('Phone');
-
+const message = document.getElementById('message');
 const submit = document.getElementById('btn');
+
 
 submit.addEventListener('click', function(){
   const data ={
     name:Name.value,
     surname:surname.value,
     email:email.value,
-    phone:phone.value
+    phone:phone.value,
+    message: message.value
   }
   Name.value = ''
   surname.value = ''
   email.value = ''
   phone.value = ''
+  message.value= ''
   console.log(data) 
 
   const xhttp = new XMLHttpRequest();
