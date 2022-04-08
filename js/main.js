@@ -103,8 +103,10 @@ const phone = document.getElementById('Phone');
 const message = document.getElementById('message');
 const submit = document.getElementById('btn');
 
-
+let re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
 submit.addEventListener('click', function(){
+
+  
   const data ={
     name:Name.value,
     surname:surname.value,
@@ -112,21 +114,31 @@ submit.addEventListener('click', function(){
     phone:phone.value,
     message: message.value
   }
+  console.log(data)
+  if(re.test(email.value)){
+    if( Name.value && surname.value && phone.value){
+    const xhttp = new XMLHttpRequest();
+    xhttp.open("POST", "https://aquaphonics-main-wvoglgccwejru.herokuapp.com/send");
+    xhttp.setRequestHeader("Content-type", 'application/json');
+    xhttp.send(JSON.stringify(data));
+    alert('Sizinlə əlaqə saxlanılacaq')
+  }else{
+    alert('xaiş edirik xanaların hamısını doldurun')
+  }
+  }else{
+    alert("Emaili doğru yazın")
+  }
+  
   Name.value = ''
   surname.value = ''
   email.value = ''
   phone.value = ''
   message.value= ''
-  console.log(data) 
-
-  const xhttp = new XMLHttpRequest();
-  
-  xhttp.open("POST", "https://aquaphonics-main-wvoglgccwejru.herokuapp.com/send");
-  xhttp.setRequestHeader("Content-type", 'application/json');
-  xhttp.send(JSON.stringify(data));
 })
 
 // nav bars
+
+
 
 
 const topNav = document.querySelector('.top-nav')
